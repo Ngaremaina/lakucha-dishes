@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        .topnav a {
+            float: left;
+            color: #000000;
+            text-align: bottom;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+        }
+
+        .topnav a:hover {
+            background-color: #0000FF;
+            color: black;
+        }
+
+        .topnav-icons {
+            float: right;           
+        }
+
+        .topnav-icons hover{
+            background-color: #0000FF;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="{{ url_for('home_page')}}"><img src="cinqueterre.jpg" class="img-circle" height="20dp" width="20dp"></a>
+            <a class="active" href="{{ url_for('home_page')}}">Home</a>
+            <a href="{{ url_for('menu_page')}}">Menu</a>
+            <a href="{{ url_for('about_page')}}">About Us</a>
+            <a href="{{ url_for('policy_page')}}">Privacy Policy</a>
+            <a href="{{ url_for('contact_page')}}">Contact Us</a>
+            <div class="topnav-icons">
+                <a href="{{ url_for('policy_page')}}">Login</a>
+                <a href="{{ url_for('register_page')}}">Register</a>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
